@@ -1,0 +1,5 @@
+#!/bin/bash
+# Orange Pi 4 Pro + MPI3501. Raspberry Pi 用の LCD35-show は変更しない。
+set -euo pipefail
+cd "$(dirname "$0")"
+exec bash orangepi4pro/install.sh

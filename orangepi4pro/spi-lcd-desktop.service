@@ -1,0 +1,18 @@
+[Unit]
+Description=MPI3501 SPI LCD desktop for Orange Pi 4 Pro
+After=lightdm.service graphical.target
+Wants=lightdm.service
+
+[Service]
+Type=simple
+User=__USER__
+Group=__USER__
+SupplementaryGroups=dialout
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=__HOME__/.Xauthority
+ExecStart=/usr/local/bin/spi-lcd-desktop
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical.target

@@ -1,3 +1,23 @@
+# Orange Pi 4 Pro + 3.5 inch RPi Display (MPI3501)
+
+This fork keeps the Raspberry Pi scripts. For Orange Pi 4 Pro, use the userspace installer instead of ./LCD35-show.
+
+Official Ubuntu desktop, then:
+
+```
+sudo rm -rf LCD-show
+git clone https://github.com/yas0ka/LCD-show.git
+chmod -R 755 LCD-show
+cd LCD-show/
+sudo ./LCD35-orangepi4pro-show
+```
+
+Reboot if SPI was not already enabled. Plug the panel onto the first 26 pins of the 40-pin header, with pin 1 aligned. The local Xfce desktop (480x320) appears on the panel after login. Remote desktop stays a separate screen.
+
+To remove it: sudo bash orangepi4pro/uninstall.sh
+
+# Raspberry Pi
+
 ### Install drivers in the Ubuntu system
 https://github.com/lcdwiki/LCD-show-ubuntu
 
